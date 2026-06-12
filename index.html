@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Dia dos Namorados ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Georgia", serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3, #b24592);
+      color: white;
+      overflow-x: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(14px);
+      border-radius: 30px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      margin-bottom: 16px;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .subtitle {
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .heart {
+      font-size: 4rem;
+      animation: pulse 1.4s infinite;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 22px;
+      padding: 26px;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .photo-card {
+      background: white;
+      color: #b24592;
+      padding: 12px 12px 28px;
+      border-radius: 12px;
+      transform: rotate(-2deg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+
+    .photo-card:nth-child(even) {
+      transform: rotate(2deg);
+    }
+
+    .photo-card:hover {
+      transform: scale(1.04) rotate(0deg);
+    }
+
+    .photo-placeholder {
+      height: 170px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ffd1dc, #fff0f5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .button-love {
+      border: none;
+      padding: 16px 34px;
+      border-radius: 999px;
+      background: white;
+      color: #c2185b;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+
+    .button-love:hover {
+      transform: scale(1.08);
+      background: #ffe6ef;
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .floating-heart {
+      position: fixed;
+      bottom: -40px;
+      font-size: 24px;
+      animation: floatUp 7s linear infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.9;
+      }
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+        border-radius: 24px;
+      }
+
+      .message {
+        padding: 20px;
+      }
+
+      .photo-placeholder {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="floating-heart" style="left: 8%; animation-delay: 0s;">❤️</div>
+  <div class="floating-heart" style="left: 22%; animation-delay: 2s;">💕</div>
+  <div class="floating-heart" style="left: 47%; animation-delay: 1s;">💖</div>
+  <div class="floating-heart" style="left: 70%; animation-delay: 3s;">💘</div>
+  <div class="floating-heart" style="left: 88%; animation-delay: 1.8s;">❤️</div>
+
+  <main class="container">
+    <div class="heart">❤️</div>
+
+    <h1>Feliz Dia dos Namorados</h1>
+
+    
+
+    <p class="subtitle">
+      Para a pessoa que faz meu coração sorrir todos os dias.
+    </p>
+
+
+    <section class="message">
+      <p>
+        Hoje é só uma desculpa bonita para lembrar algo que eu sinto sempre:
+        você torna meus dias mais leves, meu mundo mais bonito e minha vida
+        muito mais especial.
+      </p>
+      <br />
+      <p>
+        Obrigado por existir, por estar comigo e por ser esse amor que aquece
+        meu coração. Te amo mais do que qualquer página conseguiria escrever.
+      </p>
+    </section>
+
+    <section class="photos">
+      <div class="photo-card">
+        <div class="photo-placeholder">📸</div>
+        <strong>Nosso sorriso</strong>
+      </div>
+
+      <div class="photo-card">
+        <div class="photo-placeholder">🌹</div>
+        <strong>Nosso amor</strong>
+      </div>
+
+      <div class="photo-card">
+        <div class="photo-placeholder">✨</div>
+        <strong>Nossa história</strong>
+      </div>
+    </section>
+
+    <button class="button-love" onclick="showLove()">
+      Clique aqui Moziiiii 💌
+    </button>
+
+    <p class="footer" id="loveText">
+      Feito com amor, carinho e muitos corações.
+    </p>
+
+    <section class="message">
+  <h2 style="margin-bottom:20px;">⏳ Nossa História</h2>
+
+    <div id="relationshipCounter" style="font-size:1.2rem; line-height:1.8;">
+        Carregando...
+    </div>
+    </section>
+  </main>
+
+  <script>
+    function showLove() {
+      const text = document.getElementById("loveText");
+      text.innerHTML = "Eu te amo infinitamente ❤️";
+
+      for (let i = 0; i < 18; i++) {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerText = ["❤️", "💕", "💖", "💘", "💝"][Math.floor(Math.random() * 5)];
+        heart.style.left = Math.random() * 100 + "%";
+        heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+        heart.style.fontSize = 20 + Math.random() * 22 + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+      }
+    }
+
+    const dateMet = new Date("2026-04-15T00:00:00");
+const dateDating = new Date("2026-04-24T00:00:00");
+
+function updateRelationshipCounter() {
+    const now = new Date();
+
+    const diffMet = now - dateMet;
+    const diffDating = now - dateDating;
+
+    const totalSecondsMet = Math.floor(diffMet / 1000);
+    const totalMinutesMet = Math.floor(diffMet / (1000 * 60));
+    const totalHoursMet = Math.floor(diffMet / (1000 * 60 * 60));
+    const totalDaysMet = Math.floor(diffMet / (1000 * 60 * 60 * 24));
+
+    let yearsMet = now.getFullYear() - dateMet.getFullYear();
+    let monthsMet = now.getMonth() - dateMet.getMonth();
+
+    if (monthsMet < 0) {
+        yearsMet--;
+        monthsMet += 12;
+    }
+
+    const totalDaysDating = Math.floor(diffDating / (1000 * 60 * 60 * 24));
+
+    document.getElementById("relationshipCounter").innerHTML = `
+        ❤️ Nos conhecemos há:<br><br>
+
+        <strong>${yearsMet}</strong> anos e
+        <strong>${monthsMet}</strong> meses<br>
+
+        <strong>${totalDaysMet}</strong> dias<br>
+
+        <strong>${totalHoursMet.toLocaleString('pt-BR')}</strong> horas<br>
+
+        <strong>${totalMinutesMet.toLocaleString('pt-BR')}</strong> minutos<br>
+
+        <strong>${totalSecondsMet.toLocaleString('pt-BR')}</strong> segundos<br><br>
+
+        💍 Estamos namorando há
+        <strong>${totalDaysDating}</strong> dias ❤️
+    `;
+}
+
+updateRelationshipCounter();
+setInterval(updateRelationshipCounter, 1000);
+  </script>
+</body>
+</html>
