@@ -133,6 +133,63 @@
       pointer-events: none;
     }
 
+    .carousel {
+        width: 100%;
+        max-width: 260px;
+        height: 260px;
+        margin: 0 auto 30px;
+        overflow: hidden;
+        border-radius: 18px;
+        background: white;
+        padding: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .carousel-track {
+        display: flex;
+        width: 600%;
+        height: 100%;
+        animation: slidePhotos 18s infinite;
+        }
+
+        .carousel-track img {
+        width: calc(100% / 6);
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        flex-shrink: 0;
+        }
+
+        @keyframes slidePhotos {
+        0%, 12% {
+            transform: translateX(0);
+        }
+
+        16%, 28% {
+            transform: translateX(-16.666%);
+        }
+
+        32%, 44% {
+            transform: translateX(-33.333%);
+        }
+
+        48%, 60% {
+            transform: translateX(-50%);
+        }
+
+        64%, 76% {
+            transform: translateX(-66.666%);
+        }
+
+        80%, 92% {
+            transform: translateX(-83.333%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+        }
+
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -179,6 +236,7 @@
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -213,7 +271,7 @@
       </p>
     </section>
 
-    <section class="photos">
+    <!-- <section class="photos">
       <div class="photo-card">
         <div class="photo-placeholder">📸</div>
         <strong>Nosso sorriso</strong>
@@ -228,6 +286,17 @@
         <div class="photo-placeholder">✨</div>
         <strong>Nossa história</strong>
       </div>
+    </section> -->
+
+    <section class="carousel">
+    <div class="carousel-track">
+        <img src="./static/img/img1.png" alt="Nossa foto 1" />
+        <img src="./static/img/img2.png" alt="Nossa foto 2" />
+        <img src="./static/img/img3.png" alt="Nossa foto 3" />
+        <img src="./static/img/img4.png" alt="Nossa foto 4" />
+        <img src="./static/img/img5.png" alt="Nossa foto 5" />
+        <img src="./static/img/img6.png" alt="Nossa foto 6" />
+    </div>
     </section>
 
     <button class="button-love" onclick="showLove()">
@@ -245,14 +314,17 @@
         Carregando...
     </div>
     </section>
+
   </main>
 
   <script>
+
+
     function showLove() {
       const text = document.getElementById("loveText");
       text.innerHTML = "Eu te amo infinitamente ❤️";
 
-      for (let i = 0; i < 18; i++) {
+      for (let i = 0; i < 100; i++) {
         const heart = document.createElement("div");
         heart.className = "floating-heart";
         heart.innerText = ["❤️", "💕", "💖", "💘", "💝"][Math.floor(Math.random() * 5)];
@@ -261,7 +333,7 @@
         heart.style.fontSize = 20 + Math.random() * 22 + "px";
         document.body.appendChild(heart);
 
-        setTimeout(() => heart.remove(), 6000);
+        setTimeout(() => heart.remove(), 8000);
       }
     }
 
@@ -311,5 +383,7 @@ function updateRelationshipCounter() {
 updateRelationshipCounter();
 setInterval(updateRelationshipCounter, 1000);
   </script>
+
+  
 </body>
 </html>
